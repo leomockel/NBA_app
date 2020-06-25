@@ -17,25 +17,17 @@ app.css.append_css({
 
 server = app.server
 
-df = pd.read_csv("../players_CSV/players_20years_change.csv")
-df_list = pd.read_csv("../players_CSV/players_list.csv")
-list_name_lower = pd.read_csv("../players_CSV/name_lower.csv")
-df_stat = pd.read_csv("../players_CSV/stat_mean.csv")
-final_note = pd.read_csv("../notes/position_note_final_test.csv")
-salary = pd.read_csv("../notes/salary_notes.csv")
-season_leader = pd.read_csv("../players_CSV/season_leaders.csv")
-teams = pd.read_csv("../team csv/team_season_comp.csv")
+df = pd.read_csv("data/players_20years_change.csv")
+list_name_lower = pd.read_csv("data/name_lower.csv")
+df_stat = pd.read_csv("data/stat_mean.csv")
+final_note = pd.read_csv("data/position_note_final_test.csv")
+salary = pd.read_csv("data/salary_notes.csv")
+season_leader = pd.read_csv("data/season_leaders.csv")
+teams = pd.read_csv("data/team_season_comp.csv")
 
 x1 = np.array([0, 2, 4, 6, 8, 10])
 y1 = np.array([0, 8000000, 16000000, 24000000, 32000000, 40000000])
 
-
-fig = go.Figure(data=[go.Table(
-    header=dict(values=list(df_list[["PLAYER_NAME"]]),
-                align='center'),
-    cells=dict(values=[df_list.PLAYER_NAME],
-               align='center'))
-])
 
 app.title = "20 Years of NBA Statistics"
 
@@ -599,8 +591,7 @@ app.layout = html.Div([
                     {'label': 'Washington', 'value': 'WAS'},
                     {'label': 'Charlotte', 'value': 'CHA'},
 
-                ], value=['ATL', 'BOS', 'PHI', 'LAL', 'MIA'],
-                multi=True
+                ], value='ATL',
 
             ),
 
