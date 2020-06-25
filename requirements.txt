@@ -1,0 +1,9 @@
+statsmodels
+gunicorn
+plotly==4.6.0
+dash_html_components==1.0.3
+numpy==1.18.2
+pandas==0.25.1
+dash_core_components==1.9.1
+dash==1.11.0
+scikit_learn==0.22.2.post1
