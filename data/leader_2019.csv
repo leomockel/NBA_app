@@ -1,0 +1,8 @@
+SEASON,STAT,NAME,HEIGHT,WEIGHT,POST,AGE,TEAM,PPG,FG_P,FG3_P,FT_P,RPG,APG,SPG,BPG
+2019,Youngest Player,Isaac Bonga,203,82,SF,19,LAL,"0,9","0,152",0,"0,6","1,1","0,7","0,4","0,2"
+2019,Oldest Player,Vince Carter,198,100,SG,42,ATL,"7,4","0,419","0,389","0,712","2,6","1,1","0,6","0,4"
+2019,Best Scorer,James Harden,196,100,SG,29,HOU,"36,1","0,442","0,368","0,879","6,6","7,5",2,"0,7"
+2019,Best Rebound,Andre Drummond,208,127,C,25,DET,"17,3","0,532","0,132","0,59","15,6","1,4","1,7","1,7"
+2019,Best Passer,Russell Westbrook,191,91,PG,30,OKC,"22,9","0,428","0,29","0,655","11,1","10,7","1,9","0,5"
+2019,Best Stealer,Paul George,203,100,SF,29,OKC,28,"0,438","0,386","0,839","8,2","4,1","2,2","0,4"
+2019,Best Blocker,Myles Turner,211,113,C,23,IND,"13,3","0,487","0,388","0,736","7,2","1,6","0,8","2,7"
