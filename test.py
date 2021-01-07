@@ -23,7 +23,26 @@ df_stat = pd.read_csv("data/stat_mean.csv")
 final_note = pd.read_csv("data/position_note_final_test.csv")
 salary = pd.read_csv("data/salary_notes.csv")
 leaders_top = pd.read_csv("data/leaders.csv")
-
+leader_2001 = pd.read_csv("data/leader_2001.csv")
+leader_2002 = pd.read_csv("data/leader_2002.csv")
+leader_2003 = pd.read_csv("data/leader_2003.csv")
+leader_2004 = pd.read_csv("data/leader_2004.csv")
+leader_2005 = pd.read_csv("data/leader_2005.csv")
+leader_2006 = pd.read_csv("data/leader_2006.csv")
+leader_2007 = pd.read_csv("data/leader_2007.csv")
+leader_2008 = pd.read_csv("data/leader_2008.csv")
+leader_2009 = pd.read_csv("data/leader_2009.csv")
+leader_2010 = pd.read_csv("data/leader_2010.csv")
+leader_2011 = pd.read_csv("data/leader_2011.csv")
+leader_2012 = pd.read_csv("data/leader_2012.csv")
+leader_2013 = pd.read_csv("data/leader_2013.csv")
+leader_2014 = pd.read_csv("data/leader_2014.csv")
+leader_2015 = pd.read_csv("data/leader_2015.csv")
+leader_2016 = pd.read_csv("data/leader_2016.csv")
+leader_2017 = pd.read_csv("data/leader_2017.csv")
+leader_2018 = pd.read_csv("data/leader_2018.csv")
+leader_2019 = pd.read_csv("data/leader_2019.csv")
+leader_2020 = pd.read_csv("data/leader_2020.csv")
 
 teams = pd.read_csv("data/team_season_comp.csv")
 global_seas = pd.read_csv("data/seasons_global.csv")
@@ -349,16 +368,11 @@ app.layout = html.Div([
             html.Br(),
             html.Br(),
 
-            html.Datalist(id='list-data',
-                 children=[
-                     html.Option(value=name) for name in set(df["LOWER_NAME"])
-                            ]),
-
-            dcc.Input(id="input1", type="text", placeholder="Write Name", list='list-data'),
-            dcc.Input(id="input2", type="text", placeholder="Write Name", list='list-data'),
-            dcc.Input(id="input3", type="text", placeholder="Write Name", list='list-data'),
-            dcc.Input(id="input4", type="text", placeholder="Write Name", list='list-data'),
-            dcc.Input(id="input5", type="text", placeholder="Write Name", list='list-data'),
+            dcc.Input(id="input1", type="text", placeholder="Write Name"),
+            dcc.Input(id="input2", type="text", placeholder="Write Name"),
+            dcc.Input(id="input3", type="text", placeholder="Write Name"),
+            dcc.Input(id="input4", type="text", placeholder="Write Name"),
+            dcc.Input(id="input5", type="text", placeholder="Write Name"),
 
         html.Div([
             html.Div(children=[

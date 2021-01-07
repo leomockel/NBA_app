@@ -22,8 +22,26 @@ list_name_lower = pd.read_csv("data/name_lower.csv")
 df_stat = pd.read_csv("data/stat_mean.csv")
 final_note = pd.read_csv("data/position_note_final_test.csv")
 salary = pd.read_csv("data/salary_notes.csv")
-leaders_top = pd.read_csv("data/leaders.csv")
-
+leader_2001 = pd.read_csv("data/leader_2001.csv")
+leader_2002 = pd.read_csv("data/leader_2002.csv")
+leader_2003 = pd.read_csv("data/leader_2003.csv")
+leader_2004 = pd.read_csv("data/leader_2004.csv")
+leader_2005 = pd.read_csv("data/leader_2005.csv")
+leader_2006 = pd.read_csv("data/leader_2006.csv")
+leader_2007 = pd.read_csv("data/leader_2007.csv")
+leader_2008 = pd.read_csv("data/leader_2008.csv")
+leader_2009 = pd.read_csv("data/leader_2009.csv")
+leader_2010 = pd.read_csv("data/leader_2010.csv")
+leader_2011 = pd.read_csv("data/leader_2011.csv")
+leader_2012 = pd.read_csv("data/leader_2012.csv")
+leader_2013 = pd.read_csv("data/leader_2013.csv")
+leader_2014 = pd.read_csv("data/leader_2014.csv")
+leader_2015 = pd.read_csv("data/leader_2015.csv")
+leader_2016 = pd.read_csv("data/leader_2016.csv")
+leader_2017 = pd.read_csv("data/leader_2017.csv")
+leader_2018 = pd.read_csv("data/leader_2018.csv")
+leader_2019 = pd.read_csv("data/leader_2019.csv")
+leader_2020 = pd.read_csv("data/leader_2020.csv")
 
 teams = pd.read_csv("data/team_season_comp.csv")
 global_seas = pd.read_csv("data/seasons_global.csv")
@@ -349,16 +367,11 @@ app.layout = html.Div([
             html.Br(),
             html.Br(),
 
-            html.Datalist(id='list-data',
-                 children=[
-                     html.Option(value=name) for name in set(df["LOWER_NAME"])
-                            ]),
-
-            dcc.Input(id="input1", type="text", placeholder="Write Name", list='list-data'),
-            dcc.Input(id="input2", type="text", placeholder="Write Name", list='list-data'),
-            dcc.Input(id="input3", type="text", placeholder="Write Name", list='list-data'),
-            dcc.Input(id="input4", type="text", placeholder="Write Name", list='list-data'),
-            dcc.Input(id="input5", type="text", placeholder="Write Name", list='list-data'),
+            dcc.Input(id="input1", type="text", placeholder="Write Name"),
+            dcc.Input(id="input2", type="text", placeholder="Write Name"),
+            dcc.Input(id="input3", type="text", placeholder="Write Name"),
+            dcc.Input(id="input4", type="text", placeholder="Write Name"),
+            dcc.Input(id="input5", type="text", placeholder="Write Name"),
 
         html.Div([
             html.Div(children=[
@@ -928,17 +941,14 @@ def salary_predict(value15, value16):
     [dash.dependencies.Input('year_stat1', 'value')])
 def leaders(value17):
 
+    if value17 == "2001":
         fig7 = go.Figure(data=[go.Table(
-                header=dict(values=list(leaders_top.columns),
+                header=dict(values=list(leader_2001.columns),
                 align='center'),
-                cells=dict(values=[leaders_top[leaders_top["SEASON"] == int(value17)]["SEASON"], leaders_top[leaders_top["SEASON"] == int(value17)]["STAT"],
-                       leaders_top[leaders_top["SEASON"] == int(value17)]["NAME"], leaders_top[leaders_top["SEASON"] == int(value17)]["HEIGHT"],
-                       leaders_top[leaders_top["SEASON"] == int(value17)]["WEIGHT"], leaders_top[leaders_top["SEASON"] == int(value17)]["POST"],
-                       leaders_top[leaders_top["SEASON"] == int(value17)]["AGE"], leaders_top[leaders_top["SEASON"] == int(value17)]["TEAM"],
-                       leaders_top[leaders_top["SEASON"] == int(value17)]["PPG"], leaders_top[leaders_top["SEASON"] == int(value17)]["FG_P"],
-                       leaders_top[leaders_top["SEASON"] == int(value17)]["FG3_P"], leaders_top[leaders_top["SEASON"] == int(value17)]["FT_P"],
-                       leaders_top[leaders_top["SEASON"] == int(value17)]["RPG"], leaders_top[leaders_top["SEASON"] == int(value17)]["APG"],
-                       leaders_top[leaders_top["SEASON"] == int(value17)]["SPG"], leaders_top[leaders_top["SEASON"] == int(value17)]["BPG"]],
+                cells=dict(values=[leader_2001["SEASON"], leader_2001["STAT"],
+                       leader_2001["NAME"], leader_2001["HEIGHT"],leader_2001["WEIGHT"], leader_2001["POST"], leader_2001["AGE"], leader_2001["TEAM"],
+                       leader_2001["PPG"], leader_2001["FG_P"], leader_2001["FG3_P"], leader_2001["FT_P"], leader_2001["RPG"], leader_2001["APG"],
+                       leader_2001["SPG"], leader_2001["BPG"]],
                align='center'))])
 
         return html.Div([
@@ -946,6 +956,291 @@ def leaders(value17):
                    dcc.Graph(id='g7', figure=fig7, style={
                        'height': 525})])
 
+    elif value17 == "2002":
+        fig7 = go.Figure(data=[go.Table(
+                header=dict(values=list(leader_2002.columns),
+                align='center'),
+                cells=dict(values=[leader_2002["SEASON"], leader_2002["STAT"],
+                       leader_2002["NAME"], leader_2002["HEIGHT"],leader_2002["WEIGHT"], leader_2002["POST"], leader_2002["AGE"], leader_2002["TEAM"],
+                       leader_2002["PPG"], leader_2002["FG_P"], leader_2002["FG3_P"], leader_2002["FT_P"], leader_2002["RPG"], leader_2002["APG"],
+                       leader_2002["SPG"], leader_2002["BPG"]],
+               align='center'))])
+
+        return html.Div([
+                   html.Br(),
+                   dcc.Graph(id='g7', figure=fig7, style={
+                       'height': 525})])
+
+    elif value17 == "2003":
+        fig7 = go.Figure(data=[go.Table(
+                header=dict(values=list(leader_2003.columns),
+                align='center'),
+                cells=dict(values=[leader_2003["SEASON"], leader_2003["STAT"],
+                       leader_2003["NAME"], leader_2003["HEIGHT"],leader_2003["WEIGHT"], leader_2003["POST"], leader_2003["AGE"], leader_2003["TEAM"],
+                       leader_2003["PPG"], leader_2003["FG_P"], leader_2003["FG3_P"], leader_2003["FT_P"], leader_2003["RPG"], leader_2003["APG"],
+                       leader_2003["SPG"], leader_2003["BPG"]],
+               align='center'))])
+
+        return html.Div([
+                   html.Br(),
+                   dcc.Graph(id='g7', figure=fig7, style={
+                       'height': 525})])
+
+    elif value17 == "2004":
+        fig7 = go.Figure(data=[go.Table(
+                header=dict(values=list(leader_2004.columns),
+                align='center'),
+                cells=dict(values=[leader_2004["SEASON"], leader_2004["STAT"],
+                       leader_2004["NAME"], leader_2004["HEIGHT"],leader_2004["WEIGHT"], leader_2004["POST"], leader_2004["AGE"], leader_2004["TEAM"],
+                       leader_2004["PPG"], leader_2004["FG_P"], leader_2004["FG3_P"], leader_2004["FT_P"], leader_2004["RPG"], leader_2004["APG"],
+                       leader_2004["SPG"], leader_2004["BPG"]],
+               align='center'))])
+
+        return html.Div([
+                   html.Br(),
+                   dcc.Graph(id='g7', figure=fig7, style={
+                       'height': 525})])
+
+    elif value17 == "2005":
+        fig7 = go.Figure(data=[go.Table(
+                header=dict(values=list(leader_2005.columns),
+                align='center'),
+                cells=dict(values=[leader_2005["SEASON"], leader_2005["STAT"],
+                       leader_2005["NAME"], leader_2005["HEIGHT"],leader_2005["WEIGHT"], leader_2005["POST"], leader_2005["AGE"], leader_2005["TEAM"],
+                       leader_2005["PPG"], leader_2005["FG_P"], leader_2005["FG3_P"], leader_2005["FT_P"], leader_2005["RPG"], leader_2005["APG"],
+                       leader_2005["SPG"], leader_2005["BPG"]],
+               align='center'))])
+
+        return html.Div([
+                   html.Br(),
+                   dcc.Graph(id='g7', figure=fig7, style={
+                       'height': 525})])
+
+    elif value17 == "2006":
+        fig7 = go.Figure(data=[go.Table(
+                header=dict(values=list(leader_2006.columns),
+                align='center'),
+                cells=dict(values=[leader_2006["SEASON"], leader_2006["STAT"],
+                       leader_2006["NAME"], leader_2006["HEIGHT"],leader_2006["WEIGHT"], leader_2006["POST"], leader_2006["AGE"], leader_2006["TEAM"],
+                       leader_2006["PPG"], leader_2006["FG_P"], leader_2006["FG3_P"], leader_2006["FT_P"], leader_2006["RPG"], leader_2006["APG"],
+                       leader_2006["SPG"], leader_2006["BPG"]],
+               align='center'))])
+
+        return html.Div([
+                   html.Br(),
+                   dcc.Graph(id='g7', figure=fig7, style={
+                       'height': 525})])
+
+    elif value17 == "2007":
+        fig7 = go.Figure(data=[go.Table(
+                header=dict(values=list(leader_2007.columns),
+                align='center'),
+                cells=dict(values=[leader_2007["SEASON"], leader_2007["STAT"],
+                       leader_2007["NAME"], leader_2007["HEIGHT"],leader_2007["WEIGHT"], leader_2007["POST"], leader_2007["AGE"], leader_2007["TEAM"],
+                       leader_2007["PPG"], leader_2007["FG_P"], leader_2007["FG3_P"], leader_2007["FT_P"], leader_2007["RPG"], leader_2007["APG"],
+                       leader_2007["SPG"], leader_2007["BPG"]],
+               align='center'))])
+
+        return html.Div([
+                   html.Br(),
+                   dcc.Graph(id='g7', figure=fig7, style={
+                       'height': 525})])
+
+    elif value17 == "2008":
+        fig7 = go.Figure(data=[go.Table(
+                header=dict(values=list(leader_2008.columns),
+                align='center'),
+                cells=dict(values=[leader_2008["SEASON"], leader_2008["STAT"],
+                       leader_2008["NAME"], leader_2008["HEIGHT"],leader_2008["WEIGHT"], leader_2008["POST"], leader_2008["AGE"], leader_2008["TEAM"],
+                       leader_2008["PPG"], leader_2008["FG_P"], leader_2008["FG3_P"], leader_2008["FT_P"], leader_2008["RPG"], leader_2008["APG"],
+                       leader_2008["SPG"], leader_2008["BPG"]],
+               align='center'))])
+
+        return html.Div([
+                   html.Br(),
+                   dcc.Graph(id='g7', figure=fig7, style={
+                       'height': 525})])
+
+    elif value17 == "2009":
+        fig7 = go.Figure(data=[go.Table(
+                header=dict(values=list(leader_2009.columns),
+                align='center'),
+                cells=dict(values=[leader_2009["SEASON"], leader_2009["STAT"],
+                       leader_2009["NAME"], leader_2009["HEIGHT"],leader_2009["WEIGHT"], leader_2009["POST"], leader_2009["AGE"], leader_2009["TEAM"],
+                       leader_2009["PPG"], leader_2009["FG_P"], leader_2009["FG3_P"], leader_2009["FT_P"], leader_2009["RPG"], leader_2009["APG"],
+                       leader_2009["SPG"], leader_2009["BPG"]],
+               align='center'))])
+
+        return html.Div([
+                   html.Br(),
+                   dcc.Graph(id='g7', figure=fig7, style={
+                       'height': 525})])
+
+    elif value17 == "2010":
+        fig7 = go.Figure(data=[go.Table(
+                header=dict(values=list(leader_2010.columns),
+                align='center'),
+                cells=dict(values=[leader_2010["SEASON"], leader_2010["STAT"],
+                       leader_2010["NAME"], leader_2010["HEIGHT"],leader_2010["WEIGHT"], leader_2010["POST"], leader_2010["AGE"], leader_2010["TEAM"],
+                       leader_2010["PPG"], leader_2010["FG_P"], leader_2010["FG3_P"], leader_2010["FT_P"], leader_2010["RPG"], leader_2010["APG"],
+                       leader_2010["SPG"], leader_2010["BPG"]],
+               align='center'))])
+
+        return html.Div([
+                   html.Br(),
+                   dcc.Graph(id='g7', figure=fig7, style={
+                       'height': 525})])
+
+    elif value17 == "2011":
+        fig7 = go.Figure(data=[go.Table(
+                header=dict(values=list(leader_2011.columns),
+                align='center'),
+                cells=dict(values=[leader_2011["SEASON"], leader_2011["STAT"],
+                       leader_2011["NAME"], leader_2011["HEIGHT"],leader_2011["WEIGHT"], leader_2011["POST"], leader_2011["AGE"], leader_2011["TEAM"],
+                       leader_2011["PPG"], leader_2011["FG_P"], leader_2011["FG3_P"], leader_2011["FT_P"], leader_2011["RPG"], leader_2011["APG"],
+                       leader_2011["SPG"], leader_2011["BPG"]],
+               align='center'))])
+
+        return html.Div([
+                   html.Br(),
+                   dcc.Graph(id='g7', figure=fig7, style={
+                       'height': 525})])
+
+    elif value17 == "2012":
+        fig7 = go.Figure(data=[go.Table(
+                header=dict(values=list(leader_2012.columns),
+                align='center'),
+                cells=dict(values=[leader_2012["SEASON"], leader_2012["STAT"],
+                       leader_2012["NAME"], leader_2012["HEIGHT"],leader_2012["WEIGHT"], leader_2012["POST"], leader_2012["AGE"], leader_2012["TEAM"],
+                       leader_2012["PPG"], leader_2012["FG_P"], leader_2012["FG3_P"], leader_2012["FT_P"], leader_2012["RPG"], leader_2012["APG"],
+                       leader_2012["SPG"], leader_2012["BPG"]],
+               align='center'))])
+
+        return html.Div([
+                   html.Br(),
+                   dcc.Graph(id='g7', figure=fig7, style={
+                       'height': 525})])
+
+    elif value17 == "2013":
+        fig7 = go.Figure(data=[go.Table(
+                header=dict(values=list(leader_2013.columns),
+                align='center'),
+                cells=dict(values=[leader_2013["SEASON"], leader_2013["STAT"],
+                       leader_2013["NAME"], leader_2013["HEIGHT"],leader_2013["WEIGHT"], leader_2013["POST"], leader_2013["AGE"], leader_2013["TEAM"],
+                       leader_2013["PPG"], leader_2013["FG_P"], leader_2013["FG3_P"], leader_2013["FT_P"], leader_2013["RPG"], leader_2013["APG"],
+                       leader_2013["SPG"], leader_2013["BPG"]],
+               align='center'))])
+
+        return html.Div([
+                   html.Br(),
+                   dcc.Graph(id='g7', figure=fig7, style={
+                       'height': 525})])
+
+    elif value17 == "2014":
+        fig7 = go.Figure(data=[go.Table(
+                header=dict(values=list(leader_2014.columns),
+                align='center'),
+                cells=dict(values=[leader_2014["SEASON"], leader_2014["STAT"],
+                       leader_2014["NAME"], leader_2014["HEIGHT"],leader_2014["WEIGHT"], leader_2014["POST"], leader_2014["AGE"], leader_2014["TEAM"],
+                       leader_2014["PPG"], leader_2014["FG_P"], leader_2014["FG3_P"], leader_2014["FT_P"], leader_2014["RPG"], leader_2014["APG"],
+                       leader_2014["SPG"], leader_2014["BPG"]],
+               align='center'))])
+
+        return html.Div([
+                   html.Br(),
+                   dcc.Graph(id='g7', figure=fig7, style={
+                       'height': 525})])
+
+    elif value17 == "2015":
+        fig7 = go.Figure(data=[go.Table(
+                header=dict(values=list(leader_2015.columns),
+                align='center'),
+                cells=dict(values=[leader_2015["SEASON"], leader_2015["STAT"],
+                       leader_2015["NAME"], leader_2015["HEIGHT"],leader_2015["WEIGHT"], leader_2015["POST"], leader_2015["AGE"], leader_2015["TEAM"],
+                       leader_2015["PPG"], leader_2015["FG_P"], leader_2015["FG3_P"], leader_2015["FT_P"], leader_2015["RPG"], leader_2015["APG"],
+                       leader_2015["SPG"], leader_2015["BPG"]],
+               align='center'))])
+
+        return html.Div([
+                   html.Br(),
+                   dcc.Graph(id='g7', figure=fig7, style={
+                       'height': 525})])
+
+    elif value17 == "2016":
+        fig7 = go.Figure(data=[go.Table(
+                header=dict(values=list(leader_2016.columns),
+                align='center'),
+                cells=dict(values=[leader_2016["SEASON"], leader_2016["STAT"],
+                       leader_2016["NAME"], leader_2016["HEIGHT"],leader_2016["WEIGHT"], leader_2016["POST"], leader_2016["AGE"], leader_2016["TEAM"],
+                       leader_2016["PPG"], leader_2016["FG_P"], leader_2016["FG3_P"], leader_2016["FT_P"], leader_2016["RPG"], leader_2016["APG"],
+                       leader_2016["SPG"], leader_2016["BPG"]],
+               align='center'))])
+
+        return html.Div([
+                   html.Br(),
+                   dcc.Graph(id='g7', figure=fig7, style={
+                       'height': 525})])
+
+    elif value17 == "2017":
+        fig7 = go.Figure(data=[go.Table(
+                header=dict(values=list(leader_2017.columns),
+                align='center'),
+                cells=dict(values=[leader_2017["SEASON"], leader_2017["STAT"],
+                       leader_2017["NAME"], leader_2017["HEIGHT"],leader_2017["WEIGHT"], leader_2017["POST"], leader_2017["AGE"], leader_2017["TEAM"],
+                       leader_2017["PPG"], leader_2017["FG_P"], leader_2017["FG3_P"], leader_2017["FT_P"], leader_2017["RPG"], leader_2017["APG"],
+                       leader_2017["SPG"], leader_2017["BPG"]],
+               align='center'))])
+
+        return html.Div([
+                   html.Br(),
+                   dcc.Graph(id='g7', figure=fig7, style={
+                       'height': 525})])
+
+    elif value17 == "2018":
+        fig7 = go.Figure(data=[go.Table(
+                header=dict(values=list(leader_2018.columns),
+                align='center'),
+                cells=dict(values=[leader_2018["SEASON"], leader_2018["STAT"],
+                       leader_2018["NAME"], leader_2018["HEIGHT"],leader_2018["WEIGHT"], leader_2018["POST"], leader_2018["AGE"], leader_2018["TEAM"],
+                       leader_2018["PPG"], leader_2018["FG_P"], leader_2018["FG3_P"], leader_2018["FT_P"], leader_2018["RPG"], leader_2018["APG"],
+                       leader_2018["SPG"], leader_2018["BPG"]],
+               align='center'))])
+
+        return html.Div([
+                   html.Br(),
+                   dcc.Graph(id='g7', figure=fig7, style={
+                       'height': 525})])
+
+    elif value17 == "2019":
+        fig7 = go.Figure(data=[go.Table(
+                header=dict(values=list(leader_2019.columns),
+                align='center'),
+                cells=dict(values=[leader_2019["SEASON"], leader_2019["STAT"],
+                       leader_2019["NAME"], leader_2019["HEIGHT"],leader_2019["WEIGHT"], leader_2019["POST"], leader_2019["AGE"], leader_2019["TEAM"],
+                       leader_2019["PPG"], leader_2019["FG_P"], leader_2019["FG3_P"], leader_2019["FT_P"], leader_2019["RPG"], leader_2019["APG"],
+                       leader_2019["SPG"], leader_2019["BPG"]],
+               align='center'))])
+
+        return html.Div([
+                   html.Br(),
+                   dcc.Graph(id='g7', figure=fig7, style={
+                       'height': 525})])
+
+    elif value17 == "2020":
+        fig7 = go.Figure(data=[go.Table(
+                header=dict(values=list(leader_2020.columns),
+                align='center'),
+                cells=dict(values=[leader_2020["SEASON"], leader_2020["STAT"],
+                       leader_2020["NAME"], leader_2020["HEIGHT"],leader_2020["WEIGHT"], leader_2020["POST"], leader_2020["AGE"], leader_2020["TEAM"],
+                       leader_2020["PPG"], leader_2020["FG_P"], leader_2020["FG3_P"], leader_2020["FT_P"], leader_2020["RPG"], leader_2020["APG"],
+                       leader_2020["SPG"], leader_2020["BPG"]],
+               align='center'))])
+
+        return html.Div([
+            html.Br(),
+            dcc.Graph(id='g7', figure=fig7, style={
+                'height': 525})
+        ])
 
 @app.callback(
     dash.dependencies.Output('output-container-button7', 'children'),
